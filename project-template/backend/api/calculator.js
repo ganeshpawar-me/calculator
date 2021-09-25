@@ -198,7 +198,7 @@ module.exports = function(urlPrsr, app, authCheck, errorHandler, responder, mysq
             mysqlPromise(revokeToken, params, mysqlConnection)
             .then((response) => {
                 responder.respond({
-                    message : "Logged out successfully"
+                    message : "Logged out successfully. You will br redirected to login page"
                 }, res);
             })
             .catch((error) => {
